@@ -1,0 +1,28 @@
+html {
+	font-size: 7.9%;
+}
+
+body {
+	line-height: 1.25;
+	font-family: 'disappointed-regular', arial, sans-serif;
+}
+
+html, body {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	margin: 0;
+}
+
+$wrapper_width: 1256px;
+#wrapper {
+	max-width: $wrapper_width;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: $color_link;
+}

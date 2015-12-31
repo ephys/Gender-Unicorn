@@ -1,0 +1,27 @@
+$color_gender_identity: #00d8af;
+$color_gender_expression: #70e268;
+$color_female: #ff9327;
+$color_male: $color_gender_identity;
+$color_other: #9945d9;
+$color_attraction_physical: $color_female;
+$color_attraction_emotional: #a0000c;
+
+$color_link: #49236e;
+
+@font-face {
+	font-family: 'disappointed-regular';
+	src: url('../font/cfdisappointed-regular-webfont.eot');
+	src: url('../font/cfdisappointed-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../font/cfdisappointed-regular-webfont.woff2') format('woff2'),
+	url('../font/cfdisappointed-regular-webfont.woff') format('woff'),
+	url('../font/cfdisappointed-regular-webfont.ttf') format('truetype'),
+	url('../font/cfdisappointed-regular-webfont.svg#cf_disappointedregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url('//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css');
+@import 'layout';
+@import 'header';
+@import 'unicorn';
+@import 'footer';

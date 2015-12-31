@@ -1,0 +1,48 @@
+header {
+	position: relative;
+
+	margin: 45px 10rem;
+	text-align: center;
+
+	vertical-align: bottom;
+
+	h1 {
+		vertical-align: bottom;
+		display: inline-block;
+		font-size: 117.5rem;
+	}
+
+	h2 {
+		vertical-align: bottom;
+		display: inline-block;
+		line-height: 0.6;
+		font-size: 22.5rem;
+		text-align: center;
+
+		margin-top: 10px;
+		margin-left: 2em;
+		margin-bottom: 1.2em;
+		width: auto;
+
+		a {
+			display: block;
+		}
+
+		img {
+			max-width: 35rem;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	header h2 {
+		margin-left: 0;
+		display: block;
+	}
+}
+
+@media (max-width: 940px) {
+	header h1 {
+		font-size: 15vw;
+	}
+}
