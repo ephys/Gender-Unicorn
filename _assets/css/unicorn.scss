@@ -1,5 +1,16 @@
 main {
-	h3 {
+	display: flex;
+
+	section:first-of-type {
+		margin-left: 130px;
+		margin-right: 100px;
+	}
+
+	section:last-of-type {
+		flex: 1;
+	}
+
+	h3, legend {
 		font-size: 38.81rem;
 	}
 
@@ -9,61 +20,211 @@ main {
 }
 
 .unicorn {
+	$ratio: 1.2;
+
+	$unicorn_width: 235px;
+	$unicorn_height: 473px;
+
 	background: url(../img/awesome_unicorn.png);
-	width: 235px;
-	margin-left: 120px;
-	height: 473px;
+	background-size: cover;
+	width: $unicorn_width * $ratio;
+	height: $unicorn_height * $ratio;
+
 	position: relative;
 
 	* {
 		position: absolute;
+		background-size: cover;
 	}
 
 	.gender_identity {
-		background: url(../img/bubble.png);
-		width: 124px;
-		height: 106px;
+		background-image: url(../img/bubble.png);
+		width: (124px / $unicorn_width) * 100%;
+		height: (106px / $unicorn_height) * 100%;
 
-		right: -60px;
-		top: -10px;
+		right: (-60px / $unicorn_width) * 100%;
+		top: (-10px / $unicorn_height) * 100%;
 
 		&::after {
 			content: '';
 			display: block;
-			background: url(../img/gender_identity.png);
-			width: 48px;
-			height: 28px;
+
+			background-image: url(../img/gender_identity.png);
+			background-size: cover;
+
+			width: (48px / 124px) * 100%;
+			height: (28px / 106px) * 100%;
 			
 			position: absolute;
-			left: 35px;
-			top: 32px;
+			left: (35px / 124px) * 100%;
+			top: (32px / 106px) * 100%;
 		}
 	}
 
 	.gender_expression {
-		background: url(../img/gender_expression.png);
-		width: 103px;
-		height: 404px;
+		background-image: url(../img/gender_expression.png);
 
-		top: 30px;
-		left: -75px;
+		width: (103px / $unicorn_width) * 100%;
+		height: (404px / $unicorn_height) * 100%;
+
+		left: (-75px / $unicorn_width) * 100%;
+		top: (30px / $unicorn_height) * 100%;
 	}
 
 	.attraction {
-		background: url(../img/attraction.png);
-		width: 65px;
-		height: 39px;
+		background-image: url(../img/attraction.png);
+
+		width: (65px / $unicorn_width) * 100%;
+		height: (39px / $unicorn_height) * 100%;
 
 		left: 46%;
 		top: 53%;
 	}
 
 	.assigned_sex {
-		background: url(../img/assigned_sex.png);
-		width: 55px;
-		height: 71px;
+		background-image: url(../img/assigned_sex.png);
 
-		bottom: 44px;
+		width: (55px / $unicorn_width) * 100%;
+		height: (71px / $unicorn_height) * 100%;
+
+		bottom: (44px / $unicorn_height) * 100%;
 		left: 40%;
+	}
+}
+
+#unicorn_selection {
+	fieldset {
+		border: none;
+		position: relative;
+		padding-top: 90px;
+		padding-bottom: 20px;
+
+		&:not(:first-of-type) {
+			border-top: 3.5px black dashed;
+		}
+
+		label {
+			display: block;
+		}
+
+		legend {
+			position: absolute;
+			top: 10px;
+
+			&::before {
+				content: '';
+				display: inline-block;
+				background-size: cover;
+				vertical-align: middle;
+			}
+		}
+
+		$baseMargin: 20px;
+
+		&.select_gender_identity legend::before {
+			background-image: url(../img/gender_identity.png);
+			height: 28px;
+			width: 48px;
+
+			margin-right: $baseMargin - 2px;
+		}
+
+		&.select_gender_expression legend::before {
+			width: 38px;
+			height: 38px;
+			border-radius: 50%;
+			background-color: $color_gender_expression;
+
+			margin-right: $baseMargin + 4px;
+		}
+
+		&.select_assigned_sex {
+
+			div {
+				display: flex;
+				flex-direction: row;
+			}
+
+			label {
+				flex:1;
+				text-align: center;
+			}
+
+			input[type="radio"] {
+				vertical-align: middle;
+				position: relative;
+				width: 30px;
+				height: 30px;
+
+				display: block;
+				margin: 0 auto;
+
+				&::after {
+					content: '';
+					display: block;
+					width: 30px;
+					height: 30px;
+
+					line-height: 30px;
+					text-align: center;
+
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					margin-left: -15px;
+					margin-top: -15px;
+
+					border-radius: 50%;
+				}
+
+				&:checked::after {
+					content: '●';
+				}
+
+				&[value="f"]::after {
+					background-color: $color_female;
+					color: lighten($color_female, 25%);
+				}
+
+				&[value="m"]::after {
+					background-color: $color_male;
+					color: lighten($color_male, 25%);
+				}
+
+				&[value="o"]::after {
+					background-color: $color_other;
+					color: lighten($color_other, 25%);
+				}
+			}
+
+			legend::before {
+				background-image: url(../img/assigned_sex.png);
+
+				$originalHeight: 71;
+
+				width: 55px / $originalHeight * 48;
+				height: 48px;
+
+				margin-left: 5px;
+				margin-right: $baseMargin - 5px;
+			}
+		}
+
+		&.select_attraction_physical legend::before {
+			background-image: url(../img/attraction_physical.png);
+		}
+
+		&.select_attraction_emotional legend::before {
+			background-image: url(../img/attraction_emotional.png);
+		}
+
+		&.select_attraction legend::before {
+			width: 34px;
+			height: 30px;
+
+			vertical-align: top;
+			$padding: (48px - 30px) / 2;
+			margin: $padding $baseMargin $padding 0;
+		}
 	}
 }

@@ -26,7 +26,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
 	<meta name="twitter:creator" content="@ephyspotato" />
 
-	<link rel="icon" href="assets/img/attraction_emotional.png" type="image/png">
+	<link rel="icon" href="assets/img/favicon.png" type="image/png">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -36,49 +36,54 @@
 		<h2>Graphic by: <a href="http://www.transstudent.org/"><img src="assets/img/tser.png" title="Trans Student Educational Resources" alt="Trans Student Educational Resources"></a></h2>
 	</header>
 	<main>
-		<div class="unicorn">
-			<div class="gender_identity"></div>
-			<div class="gender_expression"></div>
-			<div class="attraction"></div>
-			<div class="assigned_sex"></div>
-		</div>
+		<section>
+			<div class="unicorn">
+				<div class="gender_identity"></div>
+				<div class="gender_expression"></div>
+				<div class="attraction"></div>
+				<div class="assigned_sex"></div>
+			</div>
+		</section>
+		<section>
+			<form id="unicorn_selection">
+				<fieldset class="select_gender_identity">
+					<legend>Gender Identity</legend>
+					<label><input type="range"> Female/Woman/Girl</label>
+					<label><input type="range"> Male/Man/Boy</label>
+					<label><input type="range"> Other Gender(s)</label>
+				</fieldset>
 
-		<form id="unicorn_selection">
-			<fieldset id="select_gender_identity">
-				<legend>Gender Identity</legend>
-				<label><input type="range"> Female/Woman/Girl</label>
-				<label><input type="range"> Male/Man/Boy</label>
-				<label><input type="range"> Other Gender(s)</label>
-			</fieldset>
+				<fieldset class="select_gender_expression">
+					<legend>Gender Expression</legend>
+					<label><input type="range"> Feminine</label>
+					<label><input type="range"> Masculine</label>
+					<label><input type="range"> Other</label>
+				</fieldset>
 
-			<fieldset id="select_gender_expression">
-				<legend>Gender Expression</legend>
-				<label><input type="range"> Feminine</label>
-				<label><input type="range"> Masculine</label>
-				<label><input type="range"> Other</label>
-			</fieldset>
+				<fieldset class="select_assigned_sex">
+					<legend>Sex Assigned at Birth</legend>
+					<div>
+						<label>Female <input type="radio" name="assigned_sex" value="f"></label>
+						<label>Male <input type="radio" name="assigned_sex" value="m"></label>
+						<label>Other/Intersex <input type="radio" name="assigned_sex" value="o"></label>
+					</div>
+				</fieldset>
 
-			<fieldset id="select_assigned_sex">
-				<legend>Sex Assigned at Birth</legend>
-				<label><input type="radio" name="assigned_sex"> Female</label>
-				<label><input type="radio" name="assigned_sex"> Male</label>
-				<label><input type="radio" name="assigned_sex"> Other/Intersex</label>
-			</fieldset>
+				<fieldset class="select_attraction_physical select_attraction">
+					<legend>Physically Attracted to</legend>
+					<label><input type="range"> Women</label>
+					<label><input type="range"> Men</label>
+					<label><input type="range"> Other Gender(s)</label>
+				</fieldset>
 
-			<fieldset id="select_attraction_physical">
-				<legend>Physically Attracted to</legend>
-				<label><input type="range"> Women</label>
-				<label><input type="range"> Men</label>
-				<label><input type="range"> Other Gender(s)</label>
-			</fieldset>
-
-			<fieldset id="select_attraction_emotional">
-				<legend>Emotionally Attracted to</legend>
-				<label><input type="range"> Women</label>
-				<label><input type="range"> Men</label>
-				<label><input type="range"> Other Gender(s)</label>
-			</fieldset>
-		</form>
+				<fieldset class="select_attraction_emotional select_attraction">
+					<legend>Emotionally Attracted to</legend>
+					<label><input type="range"> Women</label>
+					<label><input type="range"> Men</label>
+					<label><input type="range"> Other Gender(s)</label>
+				</fieldset>
+			</form>
+		</section>
 	</main>
 	<footer>
 		<p>To learn more, go to: <a href="http://www.transstudent.org/gender">www.transstudent.org/gender</a></p>
