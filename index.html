@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<!-- http://meta-tag-gen.net/ <3 -->
+	<meta charset="utf-8">
 	<title>The Gender Unicorn</title>
-
+	<meta property="og:title" content="The Gender Unicorn" />
+	<meta name="twitter:title" content="The Gender Unicorn" />
+	<meta itemprop="name" content="The Gender Unicorn">
+	<meta property="og:url" content="ephys.github.io/Gender-Unicorn" />
+	<meta name="twitter:url" content="ephys.github.io/Gender-Unicorn">
+	<meta property="og:image" content="assets/img/attraction.png"/>
+	<meta name="twitter:image" content="assets/img/attraction.png">
+	<meta itemprop="image" content="assets/img/attraction.png">
+	<meta name="twitter:card" content="summary" />
+	<meta name="description" content="TODO" />
+	<meta name="twitter:description" content="TODO" />
+	<meta property="og:description" content="TODO"/>
+	<meta itemprop="description" content="TODO">
+	<meta property="og:site_name" content="The Gender Unicorn"/>
+	<meta property="og:locale" content="en_US" />
+	<meta name="content-language" content="en_US">
+	<meta name="author" content="Anna Moore, Landyn Pan, Guylian Cox">
+	<meta name="web_author" content="Anna Moore, Landyn Pan, Guylian Cox">
+	<meta name="copyright" content="Anna Moore, Landyn Pan, Guylian Cox">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+	<meta name="twitter:creator" content="@ephyspotato" />
+
+	<link rel="icon" href="assets/img/attraction_emotional.png" type="image/png">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -14,7 +36,49 @@
 		<h2>Graphic by: <a href="http://www.transstudent.org/"><img src="assets/img/tser.png" title="Trans Student Educational Resources" alt="Trans Student Educational Resources"></a></h2>
 	</header>
 	<main>
-		<!-- All of the fun -->
+		<div class="unicorn">
+			<div class="gender_identity"></div>
+			<div class="gender_expression"></div>
+			<div class="attraction"></div>
+			<div class="assigned_sex"></div>
+		</div>
+
+		<form id="unicorn_selection">
+			<fieldset id="select_gender_identity">
+				<legend>Gender Identity</legend>
+				<label><input type="range"> Female/Woman/Girl</label>
+				<label><input type="range"> Male/Man/Boy</label>
+				<label><input type="range"> Other Gender(s)</label>
+			</fieldset>
+
+			<fieldset id="select_gender_expression">
+				<legend>Gender Expression</legend>
+				<label><input type="range"> Feminine</label>
+				<label><input type="range"> Masculine</label>
+				<label><input type="range"> Other</label>
+			</fieldset>
+
+			<fieldset id="select_assigned_sex">
+				<legend>Sex Assigned at Birth</legend>
+				<label><input type="radio" name="assigned_sex"> Female</label>
+				<label><input type="radio" name="assigned_sex"> Male</label>
+				<label><input type="radio" name="assigned_sex"> Other/Intersex</label>
+			</fieldset>
+
+			<fieldset id="select_attraction_physical">
+				<legend>Physically Attracted to</legend>
+				<label><input type="range"> Women</label>
+				<label><input type="range"> Men</label>
+				<label><input type="range"> Other Gender(s)</label>
+			</fieldset>
+
+			<fieldset id="select_attraction_emotional">
+				<legend>Emotionally Attracted to</legend>
+				<label><input type="range"> Women</label>
+				<label><input type="range"> Men</label>
+				<label><input type="range"> Other Gender(s)</label>
+			</fieldset>
+		</form>
 	</main>
 	<footer>
 		<p>To learn more, go to: <a href="http://www.transstudent.org/gender">www.transstudent.org/gender</a></p>

@@ -7,3 +7,63 @@ main {
 		font-size: 25.11rem;
 	}
 }
+
+.unicorn {
+	background: url(../img/awesome_unicorn.png);
+	width: 235px;
+	margin-left: 120px;
+	height: 473px;
+	position: relative;
+
+	* {
+		position: absolute;
+	}
+
+	.gender_identity {
+		background: url(../img/bubble.png);
+		width: 124px;
+		height: 106px;
+
+		right: -60px;
+		top: -10px;
+
+		&::after {
+			content: '';
+			display: block;
+			background: url(../img/gender_identity.png);
+			width: 48px;
+			height: 28px;
+			
+			position: absolute;
+			left: 35px;
+			top: 32px;
+		}
+	}
+
+	.gender_expression {
+		background: url(../img/gender_expression.png);
+		width: 103px;
+		height: 404px;
+
+		top: 30px;
+		left: -75px;
+	}
+
+	.attraction {
+		background: url(../img/attraction.png);
+		width: 65px;
+		height: 39px;
+
+		left: 46%;
+		top: 53%;
+	}
+
+	.assigned_sex {
+		background: url(../img/assigned_sex.png);
+		width: 55px;
+		height: 71px;
+
+		bottom: 44px;
+		left: 40%;
+	}
+}
