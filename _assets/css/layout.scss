@@ -26,3 +26,115 @@ a {
 	text-decoration: none;
 	color: $color_link;
 }
+
+// Arrow Ranges
+.arrow {
+	display: inline-flex;
+	position: relative;
+	vertical-align: top;
+
+	$thumb_height: 30px;
+	$slider_height: 14px;
+
+	$arrow_width: 110px;
+	$arrow_height: 13px;
+
+	$circle_border_size: $slider_height * 0.7;
+	$circle_center_size: $slider_height * 0.7;
+	$circle_size: $circle_center_size + $circle_border_size * 2;
+
+	margin-left: $circle_size - 5px;
+
+	.arrowhead {
+		content: '';
+
+		display: inline-block;
+
+		height: 0;
+		width: 0;
+		pointer-events: none;
+
+		border: $arrow_height solid transparent;
+		border-left-color: $color_gender_identity;
+		border-left-width: $arrow_width;
+
+		margin-top: $thumb_height / 2 - $arrow_height / 2;
+		margin-left: -1px;
+	}
+
+	.fletching {
+		content: '';
+		position: absolute;
+		z-index: 1;
+
+		display: block;
+
+		height: $circle_center_size;
+		width: $circle_center_size;
+		top: ($circle_size - $slider_height) / 2;
+
+		left: -$circle_size + 3.5px;
+
+		border-radius: 50%;
+		background-color: white;
+		border: $circle_border_size solid $color_gender_identity;
+	}
+
+	input[type="range"] {
+		flex: 1;
+
+		-webkit-appearance: none;
+
+		&:focus {
+			outline: none;
+		}
+
+		@mixin thumb() {
+			-webkit-appearance: none;
+
+			display: block;
+			height: $thumb_height;
+			width: 10px;
+			margin-top: -($thumb_height - $slider_height) / 2;
+
+			cursor: pointer;
+			background-color: darken($color-gender_identity, 10);
+			border: none;
+			border-radius: 0;
+		}
+
+		&::-webkit-slider-thumb {
+			@include thumb();
+		}
+
+		&::-moz-range-thumb {
+			@include thumb();
+		}
+
+		&::-ms-thumb {
+			@include thumb();
+		}
+
+		@mixin track() {
+			height: $slider_height;
+			margin-top: $arrow_height/2;
+
+			cursor: pointer;
+			background-color: $color_gender_identity;
+		}
+
+		&::-webkit-slider-runnable-track {
+			@include track();
+			padding-left: 2px;
+		}
+
+		&::-moz-range-track {
+			@include track();
+			padding-left: 5px;
+		}
+
+		&::-ms-track {
+			@include track();
+		}
+	}
+}

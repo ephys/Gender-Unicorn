@@ -93,23 +93,21 @@ main {
 }
 
 #unicorn_selection {
+
+	// Form Look
 	fieldset {
 		border: none;
 		position: relative;
-		padding-top: 90px;
+		padding-top: 80px;
 		padding-bottom: 20px;
 
 		&:not(:first-of-type) {
 			border-top: 3.5px black dashed;
 		}
 
-		label {
-			display: block;
-		}
-
 		legend {
 			position: absolute;
-			top: 10px;
+			top: 15px;
 
 			&::before {
 				content: '';
@@ -140,58 +138,64 @@ main {
 
 		&.select_assigned_sex {
 
-			div {
+			// flexbox doesn't work on fieldsets
+			.field_wrapper {
 				display: flex;
 				flex-direction: row;
-			}
 
-			label {
-				flex:1;
-				text-align: center;
+				> div {
+					flex: 1;
+					text-align: center;
+
+					display: flex;
+					flex-direction: column-reverse;
+
+					position: relative;
+				}
 			}
 
 			input[type="radio"] {
 				vertical-align: middle;
-				position: relative;
+
 				width: 30px;
 				height: 30px;
 
 				display: block;
 				margin: 0 auto;
 
-				&::after {
+				+ label::after {
 					content: '';
 					display: block;
 					width: 30px;
 					height: 30px;
 
+					font-size: 30px;
 					line-height: 30px;
 					text-align: center;
 
 					position: absolute;
 					left: 50%;
-					top: 50%;
+					bottom: 0;
 					margin-left: -15px;
-					margin-top: -15px;
 
 					border-radius: 50%;
 				}
 
-				&:checked::after {
+				&:checked + label::after {
 					content: '●';
 				}
 
-				&[value="f"]::after {
+				&[value="f"] + label::after {
 					background-color: $color_female;
 					color: lighten($color_female, 25%);
 				}
 
-				&[value="m"]::after {
+				&[value="m"] + label::after {
 					background-color: $color_male;
 					color: lighten($color_male, 25%);
 				}
 
-				&[value="o"]::after {
+				&[value="o"] + label::after {
 					background-color: $color_other;
 					color: lighten($color_other, 25%);
 				}
@@ -225,6 +229,30 @@ main {
 			vertical-align: top;
 			$padding: (48px - 30px) / 2;
 			margin: $padding $baseMargin $padding 0;
+		}
+	}
+
+	// Arrow Ranges
+	fieldset {
+		.arrow {
+			width: 70%;
+		}
+
+		&.select_gender_identity {
+
+		}
+
+		&.select_gender_expression{
+
+		}
+
+		&.select_assigned_sex {
+		}
+
+		&.select_attraction_physical {
+		}
+
+		&.select_attraction_emotional {
 		}
 	}
 }
