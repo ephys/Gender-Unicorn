@@ -1,14 +1,13 @@
 main {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 
 	section:first-of-type {
-		margin-left: 130px;
-		margin-right: 100px;
+		margin: 40px 80px 60px 130px;
 	}
 
-	section:last-of-type {
-		flex: 1;
+	section {
 	}
 
 	h3, legend {
@@ -30,6 +29,11 @@ main {
 	background-size: cover;
 	width: $unicorn_width * $ratio;
 	height: $unicorn_height * $ratio;
+
+	@media (max-width: 1255px) {
+		width: $unicorn_width;
+		height: $unicorn_height;
+	}
 
 	position: relative;
 
@@ -235,15 +239,27 @@ main {
 
 	// Arrow Ranges
 	fieldset {
-		.arrow {
-			width: 70%;
+		margin-right: 20px;
+		margin-left: 20px;
+		&.select_gender_identity, &.select_gender_expression,
+		&.select_attraction_physical, &.select_attraction_emotional {
+			label {
+				display: flex;
+				flex-wrap: nowrap;
+
+				.arrow {
+					flex: 1;
+					max-width: 70%;
+					min-width: 500px;
+				}
+			}
 		}
 
 		&.select_gender_identity {
 			@include setArrowColor($color_gender_identity);
 		}
 
-		&.select_gender_expression{
+		&.select_gender_expression {
 			@include setArrowColor($color_gender_expression);
 		}
 
