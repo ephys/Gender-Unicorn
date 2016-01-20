@@ -1,5 +1,6 @@
 main {
 	display: flex;
+	flex-wrap: wrap;
 
 	section:first-of-type {
 		margin-left: 130px;
@@ -239,20 +240,19 @@ main {
 		}
 
 		&.select_gender_identity {
-
+			@include setArrowColor($color_gender_identity);
 		}
 
 		&.select_gender_expression{
-
-		}
-
-		&.select_assigned_sex {
+			@include setArrowColor($color_gender_expression);
 		}
 
 		&.select_attraction_physical {
+			@include setArrowColor($color_attraction_physical);
 		}
 
 		&.select_attraction_emotional {
+			@include setArrowColor($color_attraction_emotional);
 		}
 	}
 }
