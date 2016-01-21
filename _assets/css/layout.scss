@@ -2,6 +2,10 @@ html {
 	font-size: 7.9%;
 }
 
+@media screen and (max-width: 450px) {
+	html { font-size: 6% }
+}
+
 body {
 	line-height: 1.25;
 	font-family: 'disappointed-regular', arial, sans-serif;
