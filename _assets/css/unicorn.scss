@@ -1,10 +1,12 @@
 main {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-around;
 
 	section:first-of-type {
-		margin: 40px 80px 60px 130px;
+		//margin: 40px 80px 60px 130px;
+		margin-top: 40px;
+		margin-bottom: 60px;
 	}
 
 	section {
@@ -239,18 +241,26 @@ main {
 
 	// Arrow Ranges
 	fieldset {
-		margin-right: 20px;
-		margin-left: 20px;
+		margin-right: 25px;
+		margin-left: 25px;
+
 		&.select_gender_identity, &.select_gender_expression,
 		&.select_attraction_physical, &.select_attraction_emotional {
 			label {
 				display: flex;
-				flex-wrap: nowrap;
+				flex-wrap: wrap-reverse;
 
 				.arrow {
 					flex: 1;
-					max-width: 70%;
-					min-width: 500px;
+
+					@media (min-width: 769px) {
+						max-width: 70%;
+						min-width: 500px;
+					}
+
+					@media (max-width: 770px) {
+						min-width: 100%;
+					}
 				}
 			}
 		}

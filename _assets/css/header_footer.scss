@@ -1,7 +1,7 @@
 header {
 	position: relative;
 
-	margin: 45px 10rem;
+	margin: 45px 0;
 	text-align: center;
 
 	vertical-align: bottom;
@@ -11,20 +11,20 @@ header {
 		display: inline-block;
 		font-size: 117.5rem;
 	}
+
+	h2 {
+		margin-left: 2em;
+	}
 }
 
 footer {
 	margin: 0 20px;
-	position: relative;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 
 	p {
 		font-size: 21.07rem;
-	}
-
-	h2 {
-		position: absolute;
-		right: 0;
-		top: 0;
 	}
 }
 
@@ -36,7 +36,7 @@ header h2, footer h2 {
 	text-align: center;
 
 	margin-top: 10px;
-	margin-left: 2em;
+
 	margin-bottom: 1.2em;
 	width: auto;
 
@@ -51,12 +51,6 @@ header h2, footer h2 {
 	}
 }
 
-@media (min-width: 1220px) {
-	footer h2 {
-		display: none;
-	}
-}
-
 @media (max-width: 1220px) {
 	header h2 {
 		display: none;
@@ -66,5 +60,15 @@ header h2, footer h2 {
 @media (max-width: 940px) {
 	header h1 {
 		font-size: 15vw;
+	}
+}
+
+@media (min-width: 1220px) {
+	footer {
+		justify-content: space-between;
+
+		h2 {
+			display: none;
+		}
 	}
 }
