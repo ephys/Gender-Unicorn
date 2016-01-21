@@ -9,6 +9,10 @@ html {
 body {
 	line-height: 1.25;
 	font-family: 'disappointed-regular', arial, sans-serif;
+
+	&.modal_active {
+		overflow: hidden !important;
+	}
 }
 
 html, body {
@@ -18,6 +22,36 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 	margin: 0;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+button {
+	font-size: 20rem;
+	border-radius: 3px;
+
+	border: none;
+	color: white;
+	background-color: $color_other;
+	box-shadow: 0 3px 0 0 #652080;
+
+	padding: 10px 55px;
+
+	img {
+		margin-right: 10px;
+	}
+}
+
+h3, legend {
+	font-size: 38.81rem;
+}
+
+label {
+	font-size: 25.11rem;
 }
 
 $wrapper_width: 1256px;
