@@ -8,6 +8,9 @@ $color_attraction_emotional: #a0000c;
 
 $color_link: #49236e;
 
+$unicorn_width: 235px;
+$unicorn_height: 473px;
+
 @font-face {
 	font-family: 'disappointed-regular';
 	src: url('../font/cfdisappointed-regular-webfont.eot');
@@ -25,3 +28,4 @@ $color_link: #49236e;
 @import 'header_footer';
 @import 'unicorn';
 @import 'controls';
+@import 'print';

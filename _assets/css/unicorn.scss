@@ -12,14 +12,11 @@ main {
 
 .unicorn {
 	$ratio: 1.2;
-
-	$unicorn_width: 235px;
-	$unicorn_height: 473px;
+	width: $unicorn_width * $ratio;
+	height: $unicorn_height * $ratio;
 
 	background: url(../img/awesome_unicorn.png);
 	background-size: cover;
-	width: $unicorn_width * $ratio;
-	height: $unicorn_height * $ratio;
 
 	@media (max-width: 1255px) {
 		width: $unicorn_width;

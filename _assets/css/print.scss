@@ -1,0 +1,88 @@
+@media print {
+	@page {
+		size: landscape;
+	}
+
+	* {
+		-webkit-print-color-adjust: exact;
+	}
+
+	html {
+		zoom: 0.8;
+	}
+
+	header, footer {
+		margin: 0;
+
+		h1 {
+			font-size: 100rem;
+		}
+
+		h2 {
+			display: inline-block;
+		}
+	}
+
+	#wrapper {
+		max-width: none;
+		margin: 0;
+	}
+
+	header {
+		margin-bottom: -30px;
+	}
+
+	main {
+		justify-content: center;
+		flex-wrap: nowrap;
+	}
+
+	footer {
+		position: fixed;
+		bottom: 100px;
+
+		p:last-of-type {
+			margin-bottom: 0;
+		}
+
+		h2 {
+			display: none;
+		}
+	}
+
+	.unicorn {
+		$ratio: 1.1;
+		width: $unicorn_width * $ratio;
+		height: $unicorn_height * $ratio;
+	}
+
+	#unicorn_selection {
+		transform-origin: left top;
+		transform: scale(0.882);
+		flex: 1;
+
+		fieldset {
+			padding-top: 60px;
+			padding-bottom: 15px;
+
+			legend {
+				top: 10px;
+			}
+
+			&.select_gender_identity, &.select_gender_expression, &.select_attraction_physical, &.select_attraction_emotional {
+				label {
+					flex-wrap: nowrap;
+					margin-bottom: -10px;
+				}
+			}
+		}
+	}
+
+	button {
+		display: none;
+	}
+
+	.modal {
+		display: none;
+	}
+}

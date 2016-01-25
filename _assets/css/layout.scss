@@ -131,6 +131,9 @@ a {
 		@mixin thumb() {
 			-webkit-appearance: none;
 
+			position: relative;
+			z-index: 2;
+
 			display: block;
 			height: $thumb_height;
 			width: 10px;

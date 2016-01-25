@@ -143,4 +143,6 @@ $(function() {
 	}
 
 	Modal.init();
+
+//	window.print();
 });
