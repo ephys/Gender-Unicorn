@@ -8,7 +8,9 @@
 	}
 
 	html {
-		zoom: 0.8;
+		// TODO replace by another method of scaling down
+		transform-origin: center top;
+		transform: scale(0.79);
 	}
 
 	header, footer {
@@ -39,7 +41,8 @@
 
 	footer {
 		position: fixed;
-		bottom: 100px;
+		bottom: 130px;
+		left: -80px;
 
 		p:last-of-type {
 			margin-bottom: 0;
@@ -57,6 +60,7 @@
 	}
 
 	#unicorn_selection {
+		// TODO replace by another method of scaling down
 		transform-origin: left top;
 		transform: scale(0.882);
 		flex: 1;
