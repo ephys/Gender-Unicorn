@@ -44,6 +44,11 @@
 		bottom: 130px;
 		left: -80px;
 
+		p:first-of-type {
+			line-height: 0.961;
+			padding-bottom: 5px;
+		}
+
 		p:last-of-type {
 			margin-bottom: 0;
 		}
